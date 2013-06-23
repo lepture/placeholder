@@ -8,11 +8,15 @@ module.exports = function(el) {
     el = [el];
   }
   for (var i = 0; i < el.length; i++) {
-    attachBlur(el[i]);
+    hasContent(el[i]);
   }
 }
 
-function attachBlur(el) {
+function hasContent(el) {
+  if (el.textContent) {
+    el.classList.add('placeholder-has-content');
+  }
+
   el.addEventListener('blur', function() {
     if (this.textContent) {
       el.classList.add('placeholder-has-content');
