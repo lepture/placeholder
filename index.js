@@ -13,15 +13,15 @@ module.exports = function(el) {
 }
 
 function hasContent(el) {
-  if (el.textContent) {
-    el.classList.add('placeholder-has-content');
+  if (!el.textContent) {
+    el.classList.add('placeholder');
   }
 
   el.addEventListener('blur', function() {
     if (this.textContent) {
-      el.classList.add('placeholder-has-content');
+      el.classList.remove('placeholder');
     } else {
-      el.classList.remove('placeholder-has-content');
+      el.classList.add('placeholder');
     }
   });
 }
