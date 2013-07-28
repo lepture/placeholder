@@ -14,14 +14,14 @@ module.exports = function(el) {
 
 function hasContent(el) {
   if (!el.textContent) {
-    el.classList.add('placeholder');
+    el.className += ' placeholder';
   }
 
   el.addEventListener('blur', function() {
     if (this.textContent) {
-      el.classList.remove('placeholder');
+      el.className = el.className.replace(/\s?placeholder\s?/g, '');
     } else {
-      el.classList.add('placeholder');
+      el.className += ' placeholder';
     }
   });
 }
