@@ -21,7 +21,13 @@ Your element should contain a `data-placeholder`:
 Enable the placeholder:
 
 ```js
-require('placeholder')()
+var placeholder = require('placeholder');
+
+// enable for all elements that has [data-placeholder]
+placeholder();
+
+// enable for specified elements
+placeholder($('#editable'));
 ```
 
 ## License
