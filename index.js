@@ -13,6 +13,8 @@ module.exports = function(el) {
 }
 
 function hasContent(el) {
+  if (!el.addEventListener) return;
+
   if (!el.textContent) {
     el.className += ' placeholder';
   }
