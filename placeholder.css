@@ -1,6 +1,5 @@
 .placeholder:not(:focus):before {
   content: attr(data-placeholder);
-  float: left;
   margin-left: 2px;
   opacity: 0.4
 }
