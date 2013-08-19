@@ -1,7 +1,11 @@
 {
   "name": "placeholder",
   "description": "fake placeholder with css and data-placeholder",
-  "version": "0.2.0",
-  "scripts": ["index.js"],
-  "styles": ["placeholder.css"]
+  "version": "0.2.1",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "placeholder.css"
+  ]
 }
