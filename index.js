@@ -21,7 +21,7 @@ function hasContent(el) {
 
   el.addEventListener('blur', function() {
     if (this.textContent) {
-      el.className = el.className.replace(/\s?placeholder\s?/g, '');
+      el.className = el.className.replace(/\s?placeholder\s?/g, ' ');
     } else {
       el.className += ' placeholder';
     }
