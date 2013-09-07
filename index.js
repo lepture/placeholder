@@ -30,6 +30,6 @@ function hasContent(el) {
 
 function addClass(el) {
   if (!/\bplaceholder\b/.test(el.className)) {
-      el.className += ' placeholder';
+    el.className = el.className.replace(/\s+$/, '') + ' placeholder';
   }
 }
