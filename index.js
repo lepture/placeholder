@@ -16,14 +16,20 @@ function hasContent(el) {
   if (!el.addEventListener) return;
 
   if (!el.textContent) {
-    el.className += ' placeholder';
+    addClass(el);
   }
 
   el.addEventListener('blur', function() {
     if (this.textContent) {
       el.className = el.className.replace(/\s?placeholder\s?/g, ' ');
     } else {
-      el.className += ' placeholder';
+      addClass(el);
     }
   });
+}
+
+function addClass(el) {
+  if (!/\bplaceholder\b/.test(el.className)) {
+      el.className += ' placeholder';
+  }
 }
