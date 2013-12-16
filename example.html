@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <title>Placeholder Example</title>
     <link rel="stylesheet" href="build/build.css" />
+    <style>
+      #container {
+        max-width: 680px;
+        min-height: 300px;
+        outline: none;
+        margin: 40px auto;
+      }
+    </style>
     <script type="text/javascript" src="build/build.js"></script>
   </head>
   <body>
-    <div data-placeholder="Your content here" contenteditable></div>
+    <div id="container" data-placeholder="Your content here" contenteditable></div>
     <script type="text/javascript">
       require('placeholder')();
     </script>
