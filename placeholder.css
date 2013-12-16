@@ -1,4 +1,4 @@
-.placeholder:not(:focus):before {
+.placeholder:before {
   content: attr(data-placeholder);
   margin-left: 2px;
   opacity: 0.4
